@@ -1,15 +1,140 @@
 ---
+import Layout from '../layouts/Layout.astro';
+
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+import Timeline from '../components/Timeline.astro'
+import TimelineItem from '../components/TimelineItem.astro';
+import Profile from '../components/Profile.astro'
+
+import background_video from '../content/website_rde_v1.mp4';
+import Converage from '../content/sponsors/Converge.png';
+import FEAS from '../content/sponsors/MUNFEAS.png';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Economica&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+	<main>
+		<div class="object-cover w-full max-w-full min-h-[40rem] xl:max-h-[40rem] top-0 flex justify-center items-center">
+			<div class="font-Quicksand text-white md:text-7xl text-2xl text-right z-10">D E T e c h n o l o g i e s</div>
+			<!-- <div class="flex flex-wrap justify-center">
+				<img class="z-10 h-20" src={logo} />
+				<div class="px-10 text-white text-7xl text-center z-10 ">Coming Soon</div>
+			</div> -->
+			<video
+    			autoplay
+   				loop
+    			muted
+				playsinline
+				onloadstart="this.playbackRate = 0.75;"
+    			class="object-cover absolute brightness-50 w-full min-h-[40rem] xl:max-h-[30rem] max-w-full top-0"
+  			>
+				<source
+      				src={background_video}
+      				type="video/mp4"
+    			/>
+			</video>
+		</div>
+		<div id="about" class="object-cover w-full max-w-full min-h-[75vh] top-0 flex justify-center">
+			<div class="flex flex-col md:flex-row md:max-w-screen">
+				<div class="flex flex-col md:p-4 p-10 leading-normal justify-center md:space-y-20 space-y-5">
+					<div>
+						<div class="mb-3 text-3xl font-Quicksand text-gray-200">Overview</div>
+						<div class="mb-3 font-normal text-gray-400">
+							This project aims to contribute to the global research space regarding Rotating Detonation Engine (RDE) development. RDEs have prospective applications as orbital maneuvering thrusters, staged launch vehicle booster engines, missile engines, gas turbine combustors, and supersonic aircraft engines. The goal of this project is to build a modular, liquid cooled, RDE capable of thrust output on the order of 500N.
+						</div>
+						<div class="mb-3 font-normal text-gray-400">
+							Our operational objectives are to maximize efficiency, collect empirical data, and document design choice relations to exected results during the development process. The engine will be designed as modular as possible, to allow for future research and development work to be conducted by students and faculty researchers. We plan to have our work published in full, as a reference roadmap for design, construction and testing of RDEs in a research environment.
+						</div>
+						<div class="mb-3 text-3xl font-Quicksand text-gray-200">Long Term Objectives</div>
+						<div class="mb-3 font-normal text-gray-400">
+							<div>The team is seeking not only to contribute to the research environment surrounding the development of rotating detonation engines, but also to stimulate rocketry/combustion research interest in Newfoundland. With our successful RDE test-engine, we plan to:</div>
+							<ul class="list-disc ml-10">
+								<li>Encourage the Memorial Univeristy Engineering Faculty to hire combustion-focused faculty members and establish a new research lab.</li>
+								<li>Push for undergraduate Engineering combustion courses to be added to the curriculum as electives.</li>
+								<li>Providing the final working RDE prototype to the Engineering faculty free of charge with the understanding that it will be used to further RDE research in Newfoundland.</li>
+								<li>Facilitating the commencement of a new student team at MUN to attend the “Launch Canada” student rocketry competition.</li>
+								<li>Showcase the RDE prototype to inspire junior engineering students to promote local research potential.</li>
+							</ul>
+						</div>
+						<div class="mb-3 text-3xl font-Quicksand text-gray-200">Timeline</div>
+						<Timeline>
+							<TimelineItem title="Literature Review" date="Febuary 2023"/>
+							<TimelineItem title="Iterative Design" date="May 2023"/>
+							<TimelineItem title="Engine Fabrication" date="October 2023"/>
+							<TimelineItem title="Testing & Validation" date="Febuary 2024"/>
+						</Timeline>
+						<div class="mb-3 text-3xl font-Quicksand text-gray-200">About the Team</div>
+						<div class="justify justify-center items-center">
+							<div class="md:space-y-0 space-y-4 grid grid-cols-1 md:grid-cols-4 place-items-center">
+								<Profile name="Shakib Miri" linkedinURL="https://www.linkedin.com/in/shakib-miri-mun2024/" image="https://media.licdn.com/dms/image/C4D03AQEEEMLJ2tJFCg/profile-displayphoto-shrink_800_800/0/1557411294112?e=1698278400&v=beta&t=Ysz3u1fJX5y8mOY1YuNX7Fb0VayFnZtT4oMLrFR6Gc8" />
+								<Profile name="Logan Palmer" linkedinURL="https://www.linkedin.com/in/lrpalmer/" image="https://media.licdn.com/dms/image/C4D03AQGqxRmLoOEYVw/profile-displayphoto-shrink_800_800/0/1572216131483?e=1698278400&v=beta&t=gXVKzhTVq01uEvqPj7DRxVu8XXLVNk9N5y01HYGKLmI" />
+								<Profile name="Aiden Clark" linkedinURL="https://www.linkedin.com/in/aidanmhclark/" image="https://media.licdn.com/dms/image/C5603AQF3ZfhLT_P8Ww/profile-displayphoto-shrink_800_800/0/1612838506728?e=1698278400&v=beta&t=3Zt4fUeDJjUwCmQU1048XLuHziv4mRysVXVXftWtz7E" />
+								<Profile name="Patrick Cleary" linkedinURL="https://www.linkedin.com/in/patrick-cleary-/" image="https://media.licdn.com/dms/image/C5603AQE5dOMDmSAuUg/profile-displayphoto-shrink_800_800/0/1629132839768?e=1698278400&v=beta&t=72b2A9wAfzalajuR8GMAH-BaD-H5aspDq5ETCe42L1Y" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="sponsors" class="object-cover w-full max-w-full min-h-[94vh] top-0 flex justify-center pb-10">
+			<div class="flex flex-col md:flex-row md:max-w-screen">
+				<div class="flex flex-col p-4 items-center leading-normal">
+					<div class="mb-2 md:pt-5 xl:pt-10 text-7xl font-Quicksand text-white">Sponsors</div>
+					<div class="mb-3 font-normal text-gray-400">
+						Sponsors are a crucial part of our team. They allow us to fund the research, design, and fabrication of our detination engine so we can do what we do best! For that, we'd like to thank all of our sponsors below!
+					</div>
+					<a href="/Sponsorship_Package_1.pdf"><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Sponsorship Presentation</button></a>
+					<div id="donate-button-container">
+						<div id="donate-button"></div>
+						<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+						<script>
+							PayPal.Donation.Button({
+							env:'production',
+							hosted_button_id:'FQ42BDKLHYRRN',
+							image: {
+							src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+							alt:'Donate with PayPal button',
+							title:'PayPal - The safer, easier way to pay online!',
+							}
+							}).render('#donate-button');
+						</script>
+					</div>
+					<div class="flex flex-col items-center">
+						<div class="pt-10 text-6xl font-Quicksand text-white">Platinum</div>
+						<div class="flex row-auto">
+							<a href="https://puglisevich.com/">
+								<img src={Converage}>
+							</a>
+						</div>
+					</div>
+					<div class="flex flex-col items-center">
+						<div class="pt-10 text-5xl font-Quicksand text-white">Gold</div>
+						<div class="flex row-auto">
+						</div>
+					</div>
+					<div class="flex flex-col items-center">
+						<div class="pt-10 text-4xl font-Quicksand text-white">Silver</div>
+						<div class="flex row-auto">
+							<a class="font-bold text-2xl tracking-tight text-white" href="https://www.mun.ca/engineering/undergraduate/community-service-and-volunteering/angus-bruneau-student-life-program/">
+								Angus Bruneau Student LIFE Program
+							</a>
+						</div>
+					</div>
+					<div class="flex flex-col items-center">
+						<div class="pt-10 text-3xl font-Quicksand text-white">Bronze</div>
+						<div class="flex flex-row items-center space-x-10">
+							<a href="https://www.mun.ca/engineering/">
+								<img src={FEAS}>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<Footer />
+	</main>
+</Layout>
