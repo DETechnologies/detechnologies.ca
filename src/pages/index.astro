@@ -87,21 +87,6 @@ import FEAS from '../content/sponsors/MUNFEAS.png';
 						Sponsors are a crucial part of our team. They allow us to fund the research, design, and fabrication of our detination engine so we can do what we do best! For that, we'd like to thank all of our sponsors below!
 					</div>
 					<a href="/Sponsorship_Package_1.pdf"><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Sponsorship Presentation</button></a>
-					<div id="donate-button-container">
-						<div id="donate-button"></div>
-						<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-						<script>
-							PayPal.Donation.Button({
-							env:'production',
-							hosted_button_id:'FQ42BDKLHYRRN',
-							image: {
-							src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
-							alt:'Donate with PayPal button',
-							title:'PayPal - The safer, easier way to pay online!',
-							}
-							}).render('#donate-button');
-						</script>
-					</div>
 					<div class="flex flex-col items-center">
 						<div class="pt-10 text-6xl font-Quicksand text-white">Platinum</div>
 						<div class="flex row-auto">
@@ -130,6 +115,21 @@ import FEAS from '../content/sponsors/MUNFEAS.png';
 								<img src={FEAS}>
 							</a>
 						</div>
+					</div>
+					<div id="donate-button-container" class="py-5">
+						<div id="donate-button"></div>
+						<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+						<script>
+							PayPal.Donation.Button({
+							env:'production',
+							hosted_button_id:'FQ42BDKLHYRRN',
+							image: {
+							src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+							alt:'Donate with PayPal button',
+							title:'PayPal - The safer, easier way to pay online!',
+							}
+							}).render('#donate-button');
+						</script>
 					</div>
 				</div>
 			</div>
