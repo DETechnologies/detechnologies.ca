@@ -47,7 +47,7 @@ export const Navbar = () => {
 							</a>
 						</motion.div>
 						<motion.div className="py-2"whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
-							<a href="/contact" className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-Quicksand items-center justify-center hover:bg-gray-900 hover:text-white `}>
+							<a href="mailto:DETechnologies@mun.ca" className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-Quicksand items-center justify-center hover:bg-gray-900 hover:text-white `}>
 								Contact
 							</a>
 						</motion.div>
