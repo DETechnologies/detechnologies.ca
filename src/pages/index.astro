@@ -71,17 +71,17 @@ import render from '../content/render.png';
 					<div>
 						<div class="mb-3 text-3xl font-Quicksand text-gray-200">Timeline</div>
 						<Timeline>
-							<TimelineItem title="Literature Review" date="Febuary 2023"/>
+							<TimelineItem title="Literature Review" date="February 2023"/>
 							<TimelineItem title="Iterative Design" date="May 2023"/>
-							<TimelineItem title="Engine Fabrication" date="October 2023"/>
-							<TimelineItem title="Testing & Validation" date="Febuary 2024"/>
+							<TimelineItem title="Engine Fabrication" date="November 2023"/>
+							<TimelineItem title="Testing & Validation" date="February 2024"/>
 						</Timeline>
 						<div class="mb-3 text-3xl font-Quicksand text-gray-200">About the Team</div>
 						<div class="justify justify-center items-center">
 							<div class="md:space-y-0 space-y-4 grid grid-cols-1 md:grid-cols-4 place-items-center">
 								<Profile name="Shakib Miri" linkedinURL="https://www.linkedin.com/in/shakib-miri-mun2024/" image="https://media.licdn.com/dms/image/C4D03AQEEEMLJ2tJFCg/profile-displayphoto-shrink_800_800/0/1557411294112?e=1698278400&v=beta&t=Ysz3u1fJX5y8mOY1YuNX7Fb0VayFnZtT4oMLrFR6Gc8" />
 								<Profile name="Logan Palmer" linkedinURL="https://www.linkedin.com/in/lrpalmer/" image="https://media.licdn.com/dms/image/D4E03AQHvRniL9m1cYw/profile-displayphoto-shrink_800_800/0/1694255134693?e=1700092800&v=beta&t=VhE4fiM26Ke7vaxhZP7_PhyaWI_xVUjTu4jNHiDABGE" />
-								<Profile name="Aiden Clark" linkedinURL="https://www.linkedin.com/in/aidanmhclark/" image="https://media.licdn.com/dms/image/C5603AQF3ZfhLT_P8Ww/profile-displayphoto-shrink_800_800/0/1612838506728?e=1698278400&v=beta&t=3Zt4fUeDJjUwCmQU1048XLuHziv4mRysVXVXftWtz7E" />
+								<Profile name="Aidan Clark" linkedinURL="https://www.linkedin.com/in/aidanmhclark/" image="https://media.licdn.com/dms/image/C5603AQF3ZfhLT_P8Ww/profile-displayphoto-shrink_800_800/0/1612838506728?e=1698278400&v=beta&t=3Zt4fUeDJjUwCmQU1048XLuHziv4mRysVXVXftWtz7E" />
 								<Profile name="Patrick Cleary" linkedinURL="https://www.linkedin.com/in/patrick-cleary-/" image="https://media.licdn.com/dms/image/C5603AQE5dOMDmSAuUg/profile-displayphoto-shrink_800_800/0/1629132839768?e=1698278400&v=beta&t=72b2A9wAfzalajuR8GMAH-BaD-H5aspDq5ETCe42L1Y" />
 							</div>
 						</div>
@@ -100,14 +100,15 @@ import render from '../content/render.png';
 					<div class="flex flex-col items-center">
 						<div class="pt-10 text-6xl font-Quicksand text-white">Platinum</div>
 						<div class="flex row-auto">
-							<a href="https://convergecfd.com/">
-								<img src={Converage}>
-							</a>
+							
 						</div>
 					</div>
 					<div class="flex flex-col items-center">
 						<div class="pt-10 text-5xl font-Quicksand text-white">Gold</div>
 						<div class="flex row-auto">
+							<a href="https://convergecfd.com/">
+								<img src={Converage}>
+							</a>
 						</div>
 					</div>
 					<div class="flex flex-col items-center">
@@ -119,13 +120,22 @@ import render from '../content/render.png';
 						</div>
 					</div>
 					<div class="flex flex-col items-center">
-						<div class="pt-10 text-3xl font-Quicksand text-white">Bronze</div>
+						<div class="pt-10 text-3xl font-Quicksand text-white">Other Sponsors</div>
 						<div class="flex flex-row items-center space-x-10">
 							<a href="https://www.mun.ca/engineering/">
 								<img src={FEAS}>
 							</a>
 						</div>
 					</div>
+					
+					<div id="Don8" class="object-cover w-full max-w-full min-h-[94vh] top-0 flex justify-center pb-10">
+						<div class="flex flex-col md:flex-row md:max-w-screen">
+							<div class="flex flex-col p-4 items-center leading-normal">
+								<div class="mb-2 md:pt-5 xl:pt-10 text-7xl font-Quicksand text-white">Support Our Work</div>
+								<div class="mb-3 font-normal text-gray-400">
+									If you'd like to support our work, feel free to contact us, or click the paypal button below!
+								</div>
+
 					<div id="donate-button-container" class="py-5">
 						<div id="donate-button"></div>
 						<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
