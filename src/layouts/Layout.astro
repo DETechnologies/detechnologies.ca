@@ -1,21 +1,12 @@
 ---
 import { Navbar } from '../components/Navbar';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 ---
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 	<head>
-		<script
-		type="text/partytown"
-		src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID">
-		</script>
-		<script type="text/partytown">
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag("js", new Date());
-		gtag("config", "GA_MEASUREMENT_ID");
-		</script>
+		<!-- Google Analytics code -->
+		<GoogleAnalytics/>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/DET_Logo0.png" />
