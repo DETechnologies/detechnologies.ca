@@ -1,1 +1,0 @@
-import"./chunks/GoogleAnalytics.astro_astro_type_script_index_0_lang.fd8944cf.js";PayPal.Donation.Button({env:"production",hosted_button_id:"FQ42BDKLHYRRN",image:{src:"https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif",alt:"Donate with PayPal button",title:"PayPal - The safer, easier way to pay online!"}}).render("#donate-button");
