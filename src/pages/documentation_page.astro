@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+import background_video from '../content/website_rde_v1.mp4';
+
+// Highlights section
+import SponsorshipPackage from '../content/Documentation/DET_info_package.pdf'
+
+// T7 deliverables
+import T7_finalReport from '../content/Documentation/DETechnologies_T7_FinalReport.pdf'
+import T7Dwgs from '../content/Documentation/DETechnologies_DrawingPackage.pdf'
+
+// LC deliverables
+import LC2024_initialDesignProposal from '../content/Documentation/DETechnologies_The_Launch_Canada_Initial_Design_Proposal.pdf'
+import LC2024_initialDesignPrez from '../content/Documentation/DETechnologies_The_Launch_Canada_Initial_Design_Proposal.pdf'
+
+---
+<Layout>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Economica&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+		<main>
+			<div class="object-cover w-full max-w-full min-h-[40rem] xl:max-h-[40rem] top-0 flex justify-center items-center">
+				<div class="font-Quicksand text-white md:text-7xl text-2xl text-right z-10">D o c u m e n t a t i o n</div>
+				<video
+					autoplay
+					   loop
+					muted
+					playsinline
+					onloadstart="this.playbackRate = 0.75;"
+					class="object-cover absolute brightness-50 w-full min-h-[40rem] xl:max-h-[30rem] max-w-full top-0"
+				  >
+					<source
+						  src={background_video}
+						  type="video/mp4"
+					/>
+				</video>
+			</div>
+			<div class="object-cover w-full max-w-full min-h-[75vh] top-0 flex justify-center">
+				<div class="flex flex-col md:flex-row md:max-w-screen">
+					<div class="flex flex-col md:p-4 p-10 leading-normal w-screen justify-center md:space-y-20 space-y-5">
+						<div>
+							<div class="mb-3 text-3xl font-Quicksand text-gray-200">Highlights</div>
+							<div class="mb-3 font-normal text-gray-400">
+							We believe in Open Source information if/when/where applicable. To remain as transparent as possible, we are sharing some of our technical documentation here. This section shows a few highlight deliverables but for more context the below sections break down deliverables into their respective categories.
+							</div>
+							<a href={SponsorshipPackage}><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Sponsorship/Info Presentation</button></a>
+
+							<!-- Publication things -->
+							<!-- <div class="mb-3 text-3xl font-Quicksand text-gray-200">Publications</div>
+							<div class="mb-3 font-normal text-gray-400">
+							
+							</div>
+							<div class="mb-3 font-normal text-gray-400">
+								Check out our work-in-progress publications;
+							</div> -->
+							
+							<!-- Launch canada things -->
+							<div class="mb-3 text-3xl font-Quicksand text-gray-200">The Launch Canada 2024</div>
+							<div class="mb-3 font-normal text-gray-400">
+							The Launch Canada 2023 is a student rocketry competition hosted in Timmins, Ontario in August. DETechnologies is participating in the LaunchCanada technology development challenge as a way to showcase our work, and the potential for future aerospace research in Newfoundland.
+							</div>
+							<div class="mb-3 font-normal text-gray-400">
+								Check out the deliverables we have been working on for the LaunchCanada competition using the buttons below.
+							</div>
+							<a href={LC2024_initialDesignProposal}><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Initial Design Proposal: Nov 2023</button></a>
+							<a href={LC2024_initialDesignPrez}><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Initial Presentation: Dec 2023</button></a>
+
+							<!-- Term 7 things -->
+							<div class="mb-3 text-3xl font-Quicksand text-gray-200">Capstone Term 7 Deliverables</div>
+							<div class="mb-3 font-normal text-gray-400">
+								Check out the deliverables that have been prepared for Academic Term 7 Capstone course.
+							</div>
+							<a href={T7_finalReport}><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Term 7 Final Report: Aug 2023</button></a>
+							<a href={T7Dwgs}><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Term 7 Conceptual Drawings: Aug 2023</button></a>
+
+						</div>
+					</div>
+				</div>
+			</main>
+		<Footer />
+	</Layout>
