@@ -1,8 +1,38 @@
 ---
 import Layout from '../layout/Layout.astro';
 import { Image } from 'astro:assets';
+import Timeline from '../components/Timeline.astro';
+import TimelineItem from '../components/TimelineItem.astro';
+import TeamProfile from '../components/TeamProfile.astro';
+
 import logo from '../content/DET_Logo.png';
 import engine from '../content/engine.png';
+
+import LoganHeadshot from '../content/People/Logan.jpg';
+import AidanHeadshot from '../content/People/Aidan.jpg';
+import ShakHeadshot from '../content/People/Shak.jpg';
+import PatrickHeadshot from '../content/People/Patrick.jpg';
+import NickHeadshot from '../content/People/Nick.jpg';
+import XiliHeadshot from '../content/People/Xili.jpg';
+import MarcyHeadshot from '../content/People/Marcy.jpg';
+import LiamHeadshot from '../content/People/Liam.jpg';
+import LandynHeadshot from "../content/People/Landyn.png"
+
+import Converge from '../content/sponsors/Converge.png';
+import FEAS from '../content/sponsors/MUNFEAS.png';
+import DS_solidworks from '../content/sponsors/DS_logo.png';
+import Ansys from '../content/sponsors/Ansys_logo.png';
+import NL_prov from '../content/sponsors/Province_NL.png';
+import Fastenal from '../content/sponsors/Fastenal.png';
+import Colab from '../content/sponsors/CoLab.png';
+import Matlab from '../content/sponsors/Matlab.png';
+import MetalPros from '../content/sponsors/metal_pros.png';
+import Fortis from '../content/sponsors/Fortis.png';
+import Altair from '../content/sponsors/Altair.png';
+import MUN_MCE from '../content/sponsors/MUN_MCE.png';
+import DETLogo from '../../public/DET_Logo0.png';
+import Clickup from '../content/sponsors/Clickup.png';
+import Swagelok from '../content/sponsors/Swagelok.png';
 ---
 
 <html lang="en">
@@ -26,8 +56,8 @@ import engine from '../content/engine.png';
 				<div class="flex flex-col items-center py-10">
 					<div class="text-2xl text-white font-bold">Overview</div>
 					<hr class="w-16 h-1 my-4 border-0 bg-gray-500">
-					<div class="relative mx-auto rounded-lg overflow-hidden">
-						<Image height={512} src={engine} alt="Profile" />
+					<div class="overflow-hidden">
+						<model-viewer class="h-96 w-screen max-w-screen" src="./RDE_MASTER_ASSEMBLY_09-26-23.glb" ar ar-placement="wall" camera-controls touch-action="pan-y" alt="A 3D model of some wall art"></model-viewer>
 					</div>
 					<div class="pt-4 lg:px-[30%] px-10 text-gray-300">
 						<div>
@@ -40,7 +70,7 @@ import engine from '../content/engine.png';
 				<div class="flex flex-col items-center py-10">
 					<div class="text-2xl text-white font-bold">Long Term Objectives</div>
 					<hr class="w-16 h-1 my-4 border-0 bg-gray-500">
-					<div class="pt-4 lg:px-[30%] px-10 text-gray-300">
+					<div class="pt-4 pb-10 lg:px-[30%] px-10 text-gray-300">
 						<div>
 							DETechnologies is seeking not only to contribute to the research environment surrounding the development of RDREs, but also to stimulate aerospace/rocketry/combustion research interest in Newfoundland. With our successful RDRE prototype, we plan to:
 						</div>
@@ -50,6 +80,40 @@ import engine from '../content/engine.png';
 							<li>Open opportunities for a student team at MUN to attend TheLaunchCanada student rocketry competition.</li>
 							<li>Showcase our functional RDRE prototype to inspire future Engineering students, and to promote Memorial's potential for future Aerospace Engineering success.</li>
 						</ul>
+					</div>
+					<Timeline>
+						<TimelineItem title="Theoretical Engine Design" date="February 2023"/>
+						<TimelineItem title="Prototype Fabrication" date="November 2023"/>	
+						<TimelineItem title="Testing & Validation" date="March 2024"/>
+						<TimelineItem title="Launch Canada Rocketry Competition" date="August 2024"/>
+					</Timeline>
+				</div>
+			</div>
+			<div id="people" class="flex justify-center bg-gray-700">
+				<div class="flex flex-col items-center py-10">
+					<div class="text-2xl text-white font-bold">Our Team</div>
+					<hr class="w-16 h-1 my-4 border-0 bg-gray-500">
+					<div class="lg:flex lg:flex-row grid grid-cols-2 lg:space-x-10 pt-4 lg:px-[20%] px-10 text-gray-300">
+						<TeamProfile image={ShakHeadshot} name="Shakib Miri" linkedin="https://www.linkedin.com/in/shakib-miri-mun2024/" isLarge={true}/>
+						<TeamProfile image={LoganHeadshot} name="Logan Palmer" linkedin="https://www.linkedin.com/in/lrpalmer" isLarge={true}/>
+						<TeamProfile image={AidanHeadshot} name="Aiden Clark" linkedin="https://www.linkedin.com/in/aidanmhclark/" isLarge={true}/>
+						<TeamProfile image={PatrickHeadshot} name="Patrick Cleary" linkedin="https://www.linkedin.com/in/patrick-cleary-/" isLarge={true}/>
+					</div>
+					<div class="lg:flex flex-row lg:space-x-10 pt-4 lg:px-[20%] px-10 text-gray-300 lg:visible hidden">
+						<TeamProfile image={XiliHeadshot} name="Dr. Xili Duan" linkedin="https://www.linkedin.com/in/xili-duan-8282337/"/>
+						<TeamProfile image={LandynHeadshot} name="Landyn Heath" linkedin="https://www.linkedin.com/in/landynheath/"/>
+						<TeamProfile image={LiamHeadshot} name="Liam Earle" linkedin="https://www.linkedin.com/in/liam-earle-98b553185/"/>
+						<TeamProfile image={NickHeadshot} name="Nick Ryan" linkedin="https://www.linkedin.com/in/nicholas-ryan-519111204/"/>
+						<TeamProfile image={MarcyHeadshot} name="Marcella Whelan" linkedin="https://www.linkedin.com/in/marcella-whelan-04a573296/"/>
+					</div>
+					<div class="grid grid-cols-3 pt-4 px-10 text-gray-300 lg:hidden">
+						<TeamProfile image={XiliHeadshot} name="Dr. Xili Duan" linkedin="https://www.linkedin.com/in/xili-duan-8282337/"/>
+						<TeamProfile image={LandynHeadshot} name="Landyn Heath" linkedin="https://www.linkedin.com/in/landynheath/"/>
+						<TeamProfile image={LiamHeadshot} name="Liam Earle" linkedin="https://www.linkedin.com/in/liam-earle-98b553185/"/>
+					</div>
+					<div class="grid grid-cols-2 pt-4 px-[96px] text-gray-300 lg:hidden">
+						<TeamProfile image={NickHeadshot} name="Nick Ryan" linkedin="https://www.linkedin.com/in/nicholas-ryan-519111204/"/>
+						<TeamProfile image={MarcyHeadshot} name="Marcella Whelan" linkedin="https://www.linkedin.com/in/marcella-whelan-04a573296/"/>
 					</div>
 				</div>
 			</div>
