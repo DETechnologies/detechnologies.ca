@@ -1,0 +1,58 @@
+---
+import Layout from '../layout/Layout.astro';
+import { Image } from 'astro:assets';
+import logo from '../content/DET_Logo.png';
+import engine from '../content/engine.png';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Economica&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+		<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+	</head>
+	<body>
+		<Layout>
+			<div class="flex items-center justify-center w-screen h-[40rem] bg-gray-600">
+				<Image height={256} src={logo} alt="logo" />
+			</div>
+			<div id="overview" class="flex justify-center bg-gray-700">
+				<div class="flex flex-col items-center py-10">
+					<div class="text-2xl text-white font-bold">Overview</div>
+					<hr class="w-16 h-1 my-4 border-0 bg-gray-500">
+					<div class="relative mx-auto rounded-lg overflow-hidden">
+						<Image height={512} src={engine} alt="Profile" />
+					</div>
+					<div class="pt-4 lg:px-[30%] px-10 text-gray-300">
+						<div>
+							This project aims to contribute to the global research field regarding Rotating Detonation Rocket Engine (RDRE) development. RDREs have prospective applications as orbital maneuvering thrusters, staged launch vehicle propulsion and supersonic aircraft engines. The goal of this project is to build a modular, liquid cooled, RDRE capable of thrust up to 1000N.<br><br>Our operational goals during the development process are to maximize prototype efficiency, develop an advanced ignition control system, and collect empirical data. The engine will be designed modularily, to accomodate future changes & technological advances, as research progresses allowing for optimal workflow. Work will be published in full, as a reference roadmap for future design, construction, and testing of RDREs; here at Memorial and on the global scale.
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="objectives" class="flex justify-center bg-gray-700">
+				<div class="flex flex-col items-center py-10">
+					<div class="text-2xl text-white font-bold">Long Term Objectives</div>
+					<hr class="w-16 h-1 my-4 border-0 bg-gray-500">
+					<div class="pt-4 lg:px-[30%] px-10 text-gray-300">
+						<div>
+							DETechnologies is seeking not only to contribute to the research environment surrounding the development of RDREs, but also to stimulate aerospace/rocketry/combustion research interest in Newfoundland. With our successful RDRE prototype, we plan to:
+						</div>
+						<ul class="px-5 pt-3 list-disc list-outside">
+							<li>Encourage the Memorial Univeristy Engineering Faculty to hire Aerospace-focused faculty members, and help establish a new research lab & research program.</li>
+							<li>Push for undergraduate Engineering aerospace/combustion courses.</li>
+							<li>Open opportunities for a student team at MUN to attend TheLaunchCanada student rocketry competition.</li>
+							<li>Showcase our functional RDRE prototype to inspire future Engineering students, and to promote Memorial's potential for future Aerospace Engineering success.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</Layout>
+	</body>
+</html>
