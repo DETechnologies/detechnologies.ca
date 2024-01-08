@@ -1,0 +1,97 @@
+---
+import Layout from '../layout/Layout.astro';
+import background_video from '../content/website_rde_v1.mp4';
+
+// Highlights section
+import SponsorshipPackage from '../content/Documentation/DET_info_package.pdf';
+import CELCPrez from '../content/Documentation/CELC2024_PresentationPoster.pdf';
+
+// T7 deliverables
+import T7_finalReport from '../content/Documentation/DETechnologies_T7_FinalReport.pdf';
+import T7Dwgs from '../content/Documentation/DETechnologies_DrawingPackage.pdf';
+
+// LC deliverables
+import LC2024_initialDesignProposal from '../content/Documentation/DETechnologies_The_Launch_Canada_Initial_Design_Proposal.pdf';
+import LC2024_initialDesignPrez from '../content/Documentation/DETechnologies_TheLaunchCanada_InitialPresentaton.pdf';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Economica&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+		<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+	</head>
+	<body>
+		<Layout>
+			<div class="flex items-center justify-center w-screen h-[40rem] bg-gray-600">
+				<div class="z-10 text-6xl text-white font-bold">Documentation</div>
+				<video
+    			autoplay
+   				loop
+    			muted
+				playsinline
+				onloadstart="this.playbackRate = 0.75;"
+    			class="object-cover absolute brightness-50 w-full min-h-[40rem] xl:max-h-[30rem] max-w-full top-0"
+  			>
+				<source
+      				src={background_video}
+      				type="video/mp4"
+    			/>
+			</video>
+			</div>
+			<div class="flex justify-center bg-gray-700">
+				<div class="flex flex-col items-center py-10">
+					<div class="text-2xl text-white font-bold">Highlights</div>
+					<hr class="w-16 h-1 my-4 border-0 bg-gray-500">
+					<div class="flex flex-col items-center pt-4 px-10 lg:px-[30%] text-gray-300">
+						<div>
+							We believe in Open Source information if/when/where applicable. To remain as transparent as possible, we are sharing some of our technical documentation here. This section shows a few highlight deliverables but for more context the below sections break down deliverables into their respective categories.
+						</div>
+						<div class="pt-4">
+							<a href="https://www.github.com/DETechnologies"><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">DETechnologies Github</button></a>
+							<a href={SponsorshipPackage}><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Sponsorship/Info Presentation</button></a>
+							<a href={CELCPrez}><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">CELC 2024 Presentation Poster</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex justify-center bg-gray-700">
+				<div class="flex flex-col items-center py-10">
+					<div class="text-2xl text-white font-bold">The Launch Canada 2024</div>
+					<hr class="w-16 h-1 my-4 border-0 bg-gray-500">
+					<div class="flex flex-col items-center pt-4 px-10 lg:px-[30%] text-gray-300">
+						<div>
+							The Launch Canada 2023 is a student rocketry competition hosted in Timmins, Ontario in August. DETechnologies is participating in the LaunchCanada technology development challenge as a way to showcase our work, and the potential for future aerospace research in Newfoundland.<br><br>
+							Check out the deliverables we have been working on for the LaunchCanada competition using the buttons below.
+						</div>
+						<div class="pt-4">
+							<a href={LC2024_initialDesignProposal}><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Initial Design Proposal: Nov 2023</button></a>
+							<a href={LC2024_initialDesignPrez}><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Initial Presentation: Dec 2023</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex justify-center bg-gray-700">
+				<div class="flex flex-col items-center py-10">
+					<div class="text-2xl text-white font-bold">Capstone Term 7 Deliverables</div>
+					<hr class="w-16 h-1 my-4 border-0 bg-gray-500">
+					<div class="flex flex-col items-center pt-4 px-10 text-gray-300">
+						<div>
+							Check out the deliverables that have been prepared for Academic Term 7 Capstone course.
+						</div>
+						<div class="pt-4">
+							<a href={T7_finalReport}><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Term 7 Final Report: Aug 2023</button></a>
+							<a href={T7Dwgs}><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Term 7 Conceptual Drawings: Aug 2023</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</Layout>
+	</body>
+</html>

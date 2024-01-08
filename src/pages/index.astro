@@ -7,6 +7,7 @@ import TeamProfile from '../components/TeamProfile.astro';
 
 import logo from '../content/DET_Logo.png';
 import engine from '../content/engine.png';
+import background_video from '../content/website_rde_v1.mp4';
 
 import LoganHeadshot from '../content/People/Logan.jpg';
 import AidanHeadshot from '../content/People/Aidan.jpg';
@@ -30,9 +31,10 @@ import MetalPros from '../content/sponsors/metal_pros.png';
 import Fortis from '../content/sponsors/Fortis.png';
 import Altair from '../content/sponsors/Altair.png';
 import MUN_MCE from '../content/sponsors/MUN_MCE.png';
-import DETLogo from '../../public/DET_Logo0.png';
 import Clickup from '../content/sponsors/Clickup.png';
 import Swagelok from '../content/sponsors/Swagelok.png';
+
+import SponsorshipPackage from '../content/Documentation/DET_info_package.pdf';
 ---
 
 <html lang="en">
@@ -50,7 +52,20 @@ import Swagelok from '../content/sponsors/Swagelok.png';
 	<body>
 		<Layout>
 			<div class="flex items-center justify-center w-screen h-[40rem] bg-gray-600">
-				<Image height={256} src={logo} alt="logo" />
+				<Image class="z-10" height={256} src={logo} alt="logo" />
+				<video
+    			autoplay
+   				loop
+    			muted
+				playsinline
+				onloadstart="this.playbackRate = 0.75;"
+    			class="object-cover absolute brightness-50 w-full min-h-[40rem] xl:max-h-[30rem] max-w-full top-0"
+  			>
+				<source
+      				src={background_video}
+      				type="video/mp4"
+    			/>
+			</video>
 			</div>
 			<div id="overview" class="flex justify-center bg-gray-700">
 				<div class="flex flex-col items-center py-10">
@@ -66,7 +81,7 @@ import Swagelok from '../content/sponsors/Swagelok.png';
 					</div>
 				</div>
 			</div>
-			<div id="objectives" class="flex justify-center bg-gray-700">
+			<div id="objectives" class="flex justify-center bg-gray-800">
 				<div class="flex flex-col items-center py-10">
 					<div class="text-2xl text-white font-bold">Long Term Objectives</div>
 					<hr class="w-16 h-1 my-4 border-0 bg-gray-500">
@@ -116,6 +131,86 @@ import Swagelok from '../content/sponsors/Swagelok.png';
 						<TeamProfile image={MarcyHeadshot} name="Marcella Whelan" linkedin="https://www.linkedin.com/in/marcella-whelan-04a573296/"/>
 					</div>
 				</div>
+			</div>
+			<div id="sponsors" class="flex justify-center bg-gray-800">
+				<div class="flex flex-col items-center py-10">
+					<div class="text-2xl text-white font-bold">Partners</div>
+					<hr class="w-16 h-1 my-4 border-0 bg-gray-500">
+					<div class="mb-3 font-normal text-gray-400 text-center">
+						These partners are a crucial part of our team. They allow us to fund the design, fabrication and testing of our engine! We'd like to thank all of these folks below!
+					</div>
+					<a href={SponsorshipPackage}><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Become a Sponsor</button></a>
+					<div class="flex flex-col items-center">
+						<div class="pt-10 text-6xl font-Quicksand text-white">Platinum</div>
+						<div class="flex flex-row items-center space-x-10">
+							<a href="https://www.colabsoftware.com/">
+								<img class="max-h-20" src={Colab.src}>	
+							</a>
+						</div>
+						<div class="flex row-auto">
+							<a href="https://www.DETechnologies.ca">
+								<img class="h-40" src={logo.src}>
+							</a>
+						</div>
+					</div>
+					<div class="flex flex-col items-center">
+						<div class="pt-10 text-5xl font-Quicksand text-white">Gold</div>
+						<div class="flex row-auto">
+							<a href="https://convergecfd.com/">
+								<img class="h-20" src={Converge.src}>
+							</a>
+						</div>
+					</div>
+					<div class="flex flex-col items-center">
+						<div class="pt-10 text-4xl font-Quicksand text-white">Silver</div>
+						<div class="flex row-auto">
+							<a class="font-bold text-2xl tracking-tight text-white" href="https://www.mun.ca/engineering/undergraduate/community-service-and-volunteering/angus-bruneau-student-life-program/">
+								Angus Bruneau Student LIFE Program
+							</a>
+						</div>
+					</div>
+					<div class="flex flex-col items-center px-10">
+						<div class="pt-10 text-3xl font-Quicksand text-white">Other Supporters</div>
+						<div class="flex flex-row items-center space-x-10">
+							<a href="https://altair.com/">
+								<img class="max-h-10" src={Altair.src}>	
+							</a>
+							<a href="https://my.solidworks.com/">
+								<img src={DS_solidworks.src}>
+							</a>
+							<a href="https://www.mathworks.com/products/matlab.html">
+								<img class="max-h-10"src={Matlab.src}>
+							</a>
+							<a href="https://www.ansys.com/">
+								<img src={Ansys.src}>
+							</a>
+							<a href="https://clickup.com/">
+								<img class="max-h-10" src={Clickup.src}>
+							</a>
+						</div>
+						<div class="flex flex-row items-center space-x-10">
+							<a href="https://www.fortisinc.com/">
+								<img class="max-h-10" src={Fortis.src}>	
+							</a>
+							<a href="https://www.fastenal.com/">
+								<img class="max-h-10" src={Fastenal.src}>
+							</a>
+							<a href="https://www.metalpros.com/">
+								<img class="max-h-10" src={MetalPros.src}>
+							</a>
+							<a href="https://www.swagelok.com/en">
+								<img class="h-20" src={Swagelok.src}>
+							</a>
+						</div>
+						<div class="flex flex-row items-center space-x-10">
+							<a href="https://www.mun.ca/engineering/">
+								<img class="w-20" src={FEAS.src}>	
+							</a>
+							<a href="https://www.mun.ca/mce/">
+								<img class="max-h-20" src={MUN_MCE.src}>
+							</a>
+						</div>
+					</div>
 			</div>
 		</Layout>
 	</body>

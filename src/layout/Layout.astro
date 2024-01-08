@@ -1,7 +1,9 @@
 ---
 import { Navbar } from '../components/NavBar.jsx';
+import Footer from '../components/Footer.astro';
 ---
 <div class="bg-gray-500 w-screen">
 	<Navbar client:load />
 	<slot />
+	<Footer />
 </div>
