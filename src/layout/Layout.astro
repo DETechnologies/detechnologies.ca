@@ -13,23 +13,22 @@ import Footer from '../components/Footer.astro';
     {
       import.meta.env.PROD && (
         <>
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_ID}`}
-          />
-          <script
-            is:inline
-            define:vars={{
-              gaId: import.meta.env.PUBLIC_GA_ID,
-            }}
-          >
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-              dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-            gtag("config", gaId);
-          </script>
+			<script
+				async
+				src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_ID}`}
+			/>
+			<script
+				is:inline
+				define:vars={{
+					gaId: import.meta.env.PUBLIC_GA_ID,
+				}}>
+				window.dataLayer = window.dataLayer || [];
+				function gtag() {
+					dataLayer.push(arguments);
+				}
+				gtag("js", new Date());
+				gtag("config", gaId);
+			</script>
         </>
       )
     }
