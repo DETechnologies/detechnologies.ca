@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import logo from '../content/DET_Logo.png'
 
+const baseUrl = `${import.meta.env.BASE_URL}/`;
+
 export const Navbar = () => {
 	const [active, setActive] = useState(false);
 	const handleClick = () => {
@@ -10,7 +12,7 @@ export const Navbar = () => {
 	return (
 		<>
 			<nav className='w-full flex items-center justify-between top-0 z-50 flex-wrap bg-gray-600 bg-opacity-75 px-3 fixed'>
-				<a href="/" className="inline-flex items-center p-2 mr-4">
+				<a href={baseUrl} className="inline-flex items-center p-2 mr-4">
 					<span className='flex items-center text-2xl text-white font-roboto tracking-wide'>
 						<img className="" width='80px' height ='80px' src={logo.src} />
 					</span>
@@ -27,25 +29,25 @@ export const Navbar = () => {
 					</svg>
 				</button>
 				<ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-					<li><a className="text-sm text-gray-300 hover:text-gray-500" href="/#">Home</a></li>
+					<li><a className="text-sm text-gray-300 hover:text-gray-500" href={baseUrl}>Home</a></li>
 					<li className="text-gray-400">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
 							<path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
 						</svg>
 					</li>
-					<li><a className="text-sm text-gray-300 hover:text-gray-500" href="/#overview">About Us</a></li>
+					<li><a className="text-sm text-gray-300 hover:text-gray-500" href={`${baseUrl}#overview`}>About Us</a></li>
 					<li className="text-gray-400">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
 							<path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
 						</svg>
 					</li>
-					<li><a className="text-sm text-gray-300 hover:text-gray-500" href="/#sponsors">Sponsorship</a></li>
+					<li><a className="text-sm text-gray-300 hover:text-gray-500" href={`${baseUrl}#sponsors`}>Sponsorship</a></li>
 					<li className="text-gray-400">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
 							<path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
 						</svg>
 					</li>
-					<li><a className="text-sm text-gray-300 hover:text-gray-500" href="/documentation">Documentation</a></li>
+					<li><a className="text-sm text-gray-300 hover:text-gray-500" href={`${baseUrl}documentation`}>Documentation</a></li>
 					<li className="text-gray-400">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
 							<path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
@@ -81,16 +83,16 @@ export const Navbar = () => {
 							</motion.div>
 						</div>
 				<div className={`relative ${active ? 'flex items-center' : 'hidden'} flex-col pb-2 w-full lg:hidden lg:flex-grow lg:w-auto`}>
-					<a href="/#" className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-Quicksand items-center justify-center hover:text-gray-400 `}>
+					<a href={baseUrl} className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-Quicksand items-center justify-center hover:text-gray-400 `}>
 						Home
 					</a>
-					<a href="/#overview" className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-Quicksand items-center justify-center hover:text-gray-400 `}>
+					<a href={`${baseUrl}#overview`} className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-Quicksand items-center justify-center hover:text-gray-400 `}>
 						About Us
 					</a>
-					<a href="/#sponsors" className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-Quicksand items-center justify-center hover:text-gray-400 `}>
+					<a href={`${baseUrl}#sponsors`} className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-Quicksand items-center justify-center hover:text-gray-400 `}>
 						Sponsorship
 					</a>
-					<a href="/documentation" className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-Quicksand items-center justify-center hover:text-gray-400 `}>
+					<a href={`${baseUrl}documentation`} className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-Quicksand items-center justify-center hover:text-gray-400 `}>
 						Documentation
 					</a>
 					<a href="mailto:DETechnologies@mun.ca" className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-Quicksand items-center justify-center hover:text-gray-400 `}>
