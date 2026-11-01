@@ -1,3 +1,9 @@
+## Website
+
+Current deployment: https://detechnologies.github.io/detechnologies.ca/
+
+Former custom domain (no longer live): https://detechnologies.ca
+
 # Astro Starter Kit: Minimal
 
 ```sh
